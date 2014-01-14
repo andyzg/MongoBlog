@@ -1,11 +1,24 @@
-h1= title
-form( method="post")
-    div
-        div
-            span Title :
-            input(type="text", name="title", id="editArticleTitle")
-        div
-            span Body :
-            textarea( name="body", rows=20, id="editArticleBody")
-        div#editArticleSubmit
-            input(type="submit", value="Send")
+extends layout
+block content
+	h1= title
+	form( method="post")
+		div.panel.panel-default
+			div.panel-heading
+				h2(align="left")
+					| Title
+			div.panel-body
+				input.form-control(type="text", name="title", id="editArticleTitle", placeholder="Enter the Title")
+		div.panel.panel-default
+			div.panel-heading
+				h2(align="left")
+					| Body
+			div.panel-body
+				textarea.form-control(name="body", id="editArticleBody", row="30" placeholder="Enter the body")
+		div.panel.panel-default
+			div.panel-heading
+				h2(align="left")
+					| Tags
+			div.panel-body
+				input.form-control(name="tags", placeholder="Enter some tags separated by spaces")				
+		div#editArticleSubmit
+			input.btn.btn-primary(type="submit", value="Submit")

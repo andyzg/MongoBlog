@@ -35,3 +35,13 @@ h1 {
 .body {
   background-color: #ffa;
 }
+#editArticleBody {
+  height: 300px;
+}
+.container ul li {
+a
+  background-color: rba(0, 0, 0, 0);
+}
+.container ul li:hover {
+  background-color: rgba(0,0,0,0.2);
+}

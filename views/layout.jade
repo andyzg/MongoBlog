@@ -1,7 +1,30 @@
-doctype 5
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+html(lang='en')
+	head
+		title= title
+		meta(charset = 'utf-8')
+		meta(name='viewport', content='width=device-width,initial-scale=1, user-scalable=no')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css')
+	body
+		nav.navbar.navbar-default(role='navigation')
+			div.container
+				div.navbar-header
+					button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+						span.sr-only
+							Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand.btn-group.big(href='/')= title
+				ul.nav.navbar-nav.navbar-right
+					li
+						a.btn-group(href='/blog/new')
+							| New Post
+					li
+						a.btn-group(href='#/profile')
+							| Profile
+					li
+						a.btn-group(href='/logout')
+							| Logout
+		div.container
+			block content

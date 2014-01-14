@@ -38,7 +38,7 @@ app.get('/', function(req, res){
 // a new blog post
 app.get('/blog/new', function(req, res) {
     res.render('blog_new.jade', {
-        title: 'New Post'
+        title: 'Blog'
     });
 });
 
